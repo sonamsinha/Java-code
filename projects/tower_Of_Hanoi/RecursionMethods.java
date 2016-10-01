@@ -9,7 +9,7 @@ public class RecursionMethods{
   /*n : numberOfDisks
     s : startPeg
     e : endPeg
-  */ t: temporaryPeg
+ t: temporaryPeg  */
   public String towerOfHanoi(int n, int s, int e){
       int t;
       String solution1, solution2, tempStep, finalSolution;
@@ -19,7 +19,7 @@ public class RecursionMethods{
             return  s + " --> "+ e +"  \n" ;
          }
          else{
-            t=6 - s - e;
+            t=6 - s -e; //t=6 - s - e;
             solution1= towerOfHanoi(n-1, s, t);
             tempStep= s +" --> " + e + "\n";
             solution2= towerOfHanoi(n-1, t, e);

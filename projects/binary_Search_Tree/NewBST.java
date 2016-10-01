@@ -84,7 +84,7 @@ public class NewBST
       return n.info;
    }
    // REMOVE
-   public boolean removeRec(int info, Node n)
+ /*  public boolean removeRec(int info, Node n)
    {
       if( n.info > info )
       {
@@ -159,6 +159,7 @@ public class NewBST
          return removeRec(info, root);
       }
    }
+   */
    
   //HEIGHT
    public int height(Node n)
@@ -237,7 +238,7 @@ public class NewBST
    	infix(root, list);
    	
    	balRec(list, 0, list.size()-1,bst);
-   	root= bst.root;
+   	//root= bst.root;
    	
    }
    
@@ -251,7 +252,7 @@ public class NewBST
    	balRec(list,mid+1, high,bst);
    }
    //SIZE
-   public int size(Node n){
+ /*  public int size(Node n){
    	if(root== null){
    		return 0;
    	}
@@ -261,7 +262,7 @@ public class NewBST
    		count+= size(n.right);
    		return count;
    	}
-   }
+   }*/
   //MAIN     
    public static void main(String[] args)
    {
@@ -285,12 +286,13 @@ public class NewBST
       System.out.println();
       System.out.println( "Height of tree = " + bst.height());
       bst.display(0);
-      while( store.size() > 0 )
+      /*while( store.size() > 0 )
       {
          int t = (int)(Math.random() * store.size());
          System.out.println( "Removing " + store.get(t) );
          bst.remove(store.get(t));
          store.remove(t);      
       }
+      System.out.println( "Height of tree = " + bst.height());*/
    }
 }
